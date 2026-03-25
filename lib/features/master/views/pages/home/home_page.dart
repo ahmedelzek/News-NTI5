@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:news_nti5/core/app_router/app_router_keys.dart';
 import 'package:news_nti5/features/master/views/widgets/customized_home_app_bar.dart';
 import 'package:news_nti5/features/master/views/widgets/customized_news_list_item.dart';
 import 'package:news_nti5/features/master/views/widgets/customized_slideable_card.dart';
@@ -58,7 +60,11 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return CustomizedNewsListItem();
+                return InkWell(
+                  onTap: (){
+                    context.push(AppRouterPaths.article);
+                  },
+                    child: CustomizedNewsListItem());
               },
               itemCount: 10,
               padding: EdgeInsets.symmetric(horizontal: 10.w),

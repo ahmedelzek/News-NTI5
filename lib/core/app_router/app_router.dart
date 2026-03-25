@@ -4,13 +4,14 @@ import 'package:news_nti5/core/app_router/app_router_keys.dart';
 import 'package:news_nti5/features/master/views/master_screen.dart';
 import 'package:news_nti5/features/onboarding/onboarding_screen.dart';
 
+import '../../features/article/views/article_screen.dart';
 import '../../features/map/map_screen.dart';
 import '../../features/splash/splash_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 final GoRouter appRouter = GoRouter(
   navigatorKey: navigatorKey,
-  initialLocation: AppRouterPaths.home,
+  initialLocation: AppRouterPaths.article,
   routes: [
     GoRoute(
       path: AppRouterPaths.onboarding,
@@ -27,6 +28,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRouterPaths.map,
       builder: (context, state) => MapScreen(),
+    ),
+    GoRoute(
+      path: AppRouterPaths.article,
+      builder: (context, state) => ArticleScreen(),
     ),
   ],
 );

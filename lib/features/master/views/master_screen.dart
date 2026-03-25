@@ -37,7 +37,7 @@ class _MasterScreenState extends State<MasterScreen> {
             onTap: changeTab,
             type: BottomNavigationBarType.fixed,
             currentIndex: selectedIndex,
-            backgroundColor: AppColors.lightBeige,
+            backgroundColor: AppColors.bottomNavBarColor,
             items: generateBottomNavItems({
               AppIcons.homeIcon: "Home",
               AppIcons.earthIcon: "Explore",

@@ -23,4 +23,7 @@ abstract class AppIcons{
   static const String uvIcon = '$base/uv_icon.svg';
   static const String weatherIcon = '$base/weather_icon.svg';
   static const String arrowIcon = '$base/arrow_icon.svg';
+  static const String arrowBackIcon = '$base/arrow_back_icon.svg';
+  static const String shareIcon = '$base/share_icon.svg';
+  static const String archiveIcon = '$base/archive_icon.svg';
 }

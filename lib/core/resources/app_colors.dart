@@ -10,4 +10,5 @@ abstract class AppColors {
   static const Color lightBeige = Color(0xffF3EBE9);
   static const Color deepBlue = Color(0xff0E0AB1);
   static const Color yellow = Color(0xffFFD324);
+  static const Color bottomNavBarColor = Color(0xffFCE9EE);
 }
