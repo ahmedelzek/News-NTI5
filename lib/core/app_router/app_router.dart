@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:news_nti5/core/app_router/app_router_keys.dart';
-import 'package:news_nti5/features/home/home_screen.dart';
+import 'package:news_nti5/features/master/views/master_screen.dart';
 import 'package:news_nti5/features/onboarding/onboarding_screen.dart';
 
 import '../../features/map/map_screen.dart';
@@ -10,7 +10,7 @@ import '../../features/splash/splash_screen.dart';
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 final GoRouter appRouter = GoRouter(
   navigatorKey: navigatorKey,
-  initialLocation: AppRouterPaths.map,
+  initialLocation: AppRouterPaths.home,
   routes: [
     GoRoute(
       path: AppRouterPaths.onboarding,
@@ -22,7 +22,7 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRouterPaths.home,
-      builder: (context, state) => HomeScreen(),
+      builder: (context, state) => MasterScreen(),
     ),
     GoRoute(
       path: AppRouterPaths.map,

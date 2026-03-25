@@ -5,6 +5,7 @@ abstract class AppImages{
   static const String image_2 = '$base/image_2.png';
   static const String mapImage = '$base/map_image.png';
   static const String onBoardingImage = '$base/onboarding_image.png';
+  static const String sunImage = '$base/sun_image.png';
 }
 
 abstract class AppIcons{
