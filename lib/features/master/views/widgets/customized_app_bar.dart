@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../core/resources/app_assets.dart';
-import '../../../../../../core/resources/app_colors.dart';
+import '../../../../core/resources/app_assets.dart';
+import '../../../../core/resources/app_colors.dart';
 
-class CustomizedHomeAppBar extends StatelessWidget {
-  const CustomizedHomeAppBar({super.key});
+class CustomizedAppBar extends StatelessWidget {
+  const CustomizedAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 83.h,
-      padding: EdgeInsets.symmetric(horizontal: 32.w),
+      padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 5.h),
       decoration: BoxDecoration(color: AppColors.paleIceBlue),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -43,8 +43,8 @@ class _CustomizedButtonState extends State<CustomizedButton> {
               SizedBox(width: 8.w),
               SvgPicture.asset(
                 widget.icon!,
-                width: 16.w,
-                height: 16.h,
+                width: 20.w,
+                height: 20.h,
               ),
             ],
           ],

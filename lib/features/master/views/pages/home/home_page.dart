@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:news_nti5/core/app_router/app_router_keys.dart';
-import 'package:news_nti5/features/master/views/pages/home/widgets/customized_home_app_bar.dart';
 import 'package:news_nti5/features/master/views/pages/home/widgets/customized_news_list_item.dart';
 import 'package:news_nti5/features/master/views/pages/home/widgets/customized_slideable_card.dart';
 import 'package:news_nti5/features/master/views/pages/home/widgets/most_populer_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../../core/resources/app_colors.dart';
+import '../../widgets/customized_app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
             height: 59.h,
             color: AppColors.paleIceBlue,
           ),
-          CustomizedHomeAppBar(),
+          CustomizedAppBar(),
           SizedBox(height: 16.h),
           SizedBox(
             height: 275.h,
