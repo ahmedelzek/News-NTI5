@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/demo_data/demo_data.dart';
-import '../../../../core/resources/app_colors.dart';
+import '../../../../../../core/demo_data/demo_data.dart';
+import '../../../../../../core/resources/app_colors.dart';
 import 'customized_tab_item.dart';
 
 class CustomizedTabBar extends StatefulWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_nti5/core/demo_data/demo_data.dart';
-import 'package:news_nti5/features/master/views/widgets/custom_explore_app_bar.dart';
-import 'package:news_nti5/features/master/views/widgets/customized_article_list_item.dart';
-import 'package:news_nti5/features/master/views/widgets/customized_tab_bar.dart';
-import 'package:news_nti5/features/master/views/widgets/cutomized_main_article.dart';
+import 'package:news_nti5/features/master/views/pages/explore/widgets/custom_explore_app_bar.dart';
+import 'package:news_nti5/features/master/views/pages/explore/widgets/customized_article_list_item.dart';
+import 'package:news_nti5/features/master/views/pages/explore/widgets/customized_tab_bar.dart';
+import 'package:news_nti5/features/master/views/pages/explore/widgets/cutomized_main_article.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});

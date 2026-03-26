@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_nti5/core/customized_widgets/customized_publisher_header.dart';
 
-import '../../../../core/resources/app_assets.dart';
+import '../../../../../../core/resources/app_assets.dart';
 
 class CustomizedMainArticle extends StatefulWidget {
   const CustomizedMainArticle({super.key});

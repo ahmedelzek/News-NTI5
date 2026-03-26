@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/resources/app_assets.dart';
-import '../../../../core/resources/app_colors.dart';
+import '../../../../../../core/resources/app_assets.dart';
+import '../../../../../../core/resources/app_colors.dart';
 
 PreferredSize customizedExploreAppBar() {
   return PreferredSize(
