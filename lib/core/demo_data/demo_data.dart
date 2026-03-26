@@ -1,0 +1,28 @@
+abstract class DemoData{
+  static const List<String> newsCategoryList = [
+    "Breaking News",
+    "World",
+    "Politics",
+    "Business",
+    "Economy",
+    "Technology",
+    "Science",
+    "Health",
+    "Environment",
+    "Education",
+    "Sports",
+    "Entertainment",
+    "Culture",
+    "Lifestyle",
+    "Travel",
+    "Opinion",
+    "Editorial",
+    "Investigative",
+    "Local News",
+    "Weather",
+    "Crime",
+    "Human Interest",
+    "Religion",
+    "Obituaries",
+  ];
+}

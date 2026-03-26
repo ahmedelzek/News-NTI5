@@ -11,7 +11,7 @@ import '../../features/splash/splash_screen.dart';
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 final GoRouter appRouter = GoRouter(
   navigatorKey: navigatorKey,
-  initialLocation: AppRouterPaths.article,
+  initialLocation: AppRouterPaths.home,
   routes: [
     GoRoute(
       path: AppRouterPaths.onboarding,

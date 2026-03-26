@@ -30,6 +30,7 @@ class ArticleScreen extends StatelessWidget {
             child: CustomizedArticleDetails(),
           ),
         ],
-      ),    );
+      ),
+    );
   }
 }
