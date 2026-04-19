@@ -17,6 +17,11 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.2
   smooth_page_indicator: ^1.1.0
+  flutter_native_splash: ^2.4.6
+  dio: ^5.9.2
+  shared_preferences: 
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
 
 dev_dependencies:
   flutter_test:

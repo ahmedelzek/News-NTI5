@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:news_nti5/core/app_router/app_router_keys.dart';
+import 'package:news_nti5/core/cache/cache_helper.dart';
+import 'package:news_nti5/core/cache/cache_keys.dart';
 
 import '../../core/customized_widgets/customized_button.dart';
 import '../../core/resources/app_assets.dart';
@@ -58,11 +60,12 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 40.h),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 110.w),
+                      margin: EdgeInsets.symmetric(horizontal: 100.w),
                       child: CustomizedButton(
                         text: "Explore",
                         icon: AppIcons.arrowIcon,
                         onTap: () {
+                          CacheHelper.setValue(CacheKeys.isFirstTime, false);
                           context.go(AppRouterPaths.map);
                         },
                       ),

@@ -30,7 +30,9 @@ class MapScreen extends StatelessWidget {
                   height: double.infinity,
                 ),
                 Positioned(
-                  bottom: 50.h,
+                  bottom: 80.h,
+                  left: 0,
+                  right: 0,
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 132.w),
                       child: CustomizedButton(text: "Get Start", onTap: (){
