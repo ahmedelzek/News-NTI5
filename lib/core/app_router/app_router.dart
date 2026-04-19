@@ -7,12 +7,12 @@ import 'package:news_nti5/features/master/views/master_screen.dart';
 import 'package:news_nti5/features/onboarding/onboarding_screen.dart';
 
 import '../../features/article/views/article_screen.dart';
-import '../../features/map/map_screen.dart';
+import '../../features/map/views/map_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 final GoRouter appRouter = GoRouter(
   navigatorKey: navigatorKey,
-  initialLocation: AppRouterPaths.onboarding,
+  initialLocation: AppRouterPaths.map,
   routes: [
     GoRoute(
       path: AppRouterPaths.onboarding,

@@ -19,7 +19,7 @@ class CustomizedNameContainer extends StatelessWidget {
           SvgPicture.asset(AppIcons.profileIcon, width: 24.w, height: 24.h),
           SizedBox(width: 12.w),
           Text(
-            "Ahmed Adel",
+            "Search",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 18.sp,

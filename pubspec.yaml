@@ -19,9 +19,11 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   flutter_native_splash: ^2.4.6
   dio: ^5.9.2
-  shared_preferences: 
+  shared_preferences:
+  geolocator: ^13.0.2 
   dartz: ^0.10.1
   flutter_bloc: ^9.1.1
+  google_maps_flutter: ^2.14.0
 
 dev_dependencies:
   flutter_test:
@@ -33,8 +35,8 @@ flutter:
   uses-material-design: true
 
   assets:
-     - assets/images/
-     - assets/icons/
+    - assets/images/
+    - assets/icons/
   fonts:
     - family: SchibstedGrotesk
       fonts:
