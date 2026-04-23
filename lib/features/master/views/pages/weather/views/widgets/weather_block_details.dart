@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:news_nti5/features/master/views/pages/weather/widgets/weather_item.dart';
+import 'package:news_nti5/features/master/views/pages/weather/views/widgets/weather_item.dart';
 
-import '../../../../../../core/resources/app_assets.dart';
+import '../../../../../../../core/resources/app_assets.dart';
 
 class WeatherBlockDetails extends StatelessWidget {
   const WeatherBlockDetails({super.key});

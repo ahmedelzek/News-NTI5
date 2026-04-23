@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/resources/app_assets.dart';
 import '../../../../core/resources/app_colors.dart';
 
 class CustomizedAppBar extends StatelessWidget {
-  const CustomizedAppBar({super.key});
+  final String degree;
+  final String title;
+  final String? iconPath;
+  const CustomizedAppBar({super.key, required this.title, required this.degree, this.iconPath});
+
+  String get _greeting {
+    final hour = DateTime.now().hour;
+    if (hour < 12) return 'Good Morning';
+    if (hour < 17) return 'Good Afternoon';
+    return 'Good Evening';
+  }
+
+  String get _currentDate {
+    return DateFormat('EEE d MMMM, yyyy').format(DateTime.now());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +36,14 @@ class CustomizedAppBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Good Morning,\nAhmed Adel",
+                "$_greeting,\nAhmed Adel",
                 style: TextStyle(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
                 ),
               ),
               Text(
-                "Sun 9 April, 2023",
+                _currentDate,
                 style: TextStyle(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w600,
@@ -40,7 +55,7 @@ class CustomizedAppBar extends StatelessWidget {
           Image.asset(AppImages.sunImage, width: 32.w, height: 32.h),
           SizedBox(width: 8.w),
           Text(
-            "Sunny 32oC",
+            "$title $degree",
             style: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w700,

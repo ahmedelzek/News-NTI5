@@ -2,10 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../../core/resources/app_assets.dart';
+import '../../../../../../../core/resources/app_assets.dart';
 
 class WeatherBlock extends StatelessWidget {
-  const WeatherBlock({super.key});
+  final String? country;
+  final String? town;
+  final String? degree;
+  final String? weatherTitle;
+  final String? weatherDescription;
+  final String? filsLike;
+
+  const WeatherBlock({super.key, this.country,
+    this.town,
+    this.degree, this.filsLike, this.weatherDescription, this.weatherTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -15,25 +24,26 @@ class WeatherBlock extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Cairo - EG",
+              "$town - $country",
               style: textStyleTitle(),
+              overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: 16.h),
             Text(
-              "27",
+              "$degree",
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 48.sp),
             ),
             SizedBox(height: 31.h),
-            Text("Clear - Clear Sky", style: textStyleTitle()),
+            Text("$weatherTitle-$weatherDescription", style: textStyleTitle()),
             SizedBox(height: 8.h),
-            Text("Feels like 28", style: TextStyle(
+            Text("Feels like $filsLike", style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 14.sp,
             ),),
           ],
         ),
         Spacer(),
-        SvgPicture.asset(AppIcons.sunriseIcon, height: 76.h, width: 76.w),
+        SvgPicture.asset(AppIcons.sunriseIcon, height: 50.h, width: 50.w),
       ],
     );
   }

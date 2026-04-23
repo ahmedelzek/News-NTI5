@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news_nti5/core/resources/app_assets.dart';
 
-import '../../../../../../core/resources/app_colors.dart';
+import '../../../../../../../core/resources/app_colors.dart';
 
 class WeatherItem extends StatelessWidget {
   final String icon;

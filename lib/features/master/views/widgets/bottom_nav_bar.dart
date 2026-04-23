@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:news_nti5/features/master/views/pages/bookmark/bookmark_page.dart';
 import 'package:news_nti5/features/master/views/pages/home/views/home_page.dart';
-import 'package:news_nti5/features/master/views/pages/weather/weather_page.dart';
+import 'package:news_nti5/features/master/views/pages/weather/views/weather_page.dart';
 
 import '../../../../core/resources/app_colors.dart';
 import '../pages/explore/explore_page.dart';

@@ -127,11 +127,11 @@ class _MapScreenState extends State<MapScreen> {
           icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
         ),
       };
-      _savePosition(tappedPoint);
     });
+    _savePosition(tappedPoint);
   }
-  void _savePosition(LatLng position) {
-    CacheHelper.setValue('lat', position.latitude);
-    CacheHelper.setValue('lng', position.longitude);
+  Future<void> _savePosition(LatLng position) async {
+    await CacheHelper.setValue('lat', position.latitude);
+    await CacheHelper.setValue('lng', position.longitude);
   }
 }

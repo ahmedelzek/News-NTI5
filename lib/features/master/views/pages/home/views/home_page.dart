@@ -3,6 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:news_nti5/core/app_router/app_router_keys.dart';
+import 'package:news_nti5/core/cache/cache_helper.dart';
+import 'package:news_nti5/core/cache/cache_keys.dart';
+
+import 'package:news_nti5/core/weather_helper.dart';
 import 'package:news_nti5/features/master/views/pages/home/cubit/home_cubit.dart';
 import 'package:news_nti5/features/master/views/pages/home/views/widgets/customized_news_list_item.dart';
 import 'package:news_nti5/features/master/views/pages/home/views/widgets/customized_slideable_card.dart';
@@ -26,10 +30,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeCubit()..getHomeData(),
+      create:
+          (context) =>
+      HomeCubit()
+        ..getHomeData()
+        ..getWeather(),
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           var cubit = HomeCubit.get(context);
+          final mainState = cubit.weatherModelResponse?.main;
+          final weatherState = cubit.weatherModelResponse?.weather?[0];
+
 
           if (state is HomeLoadingState) {
             return const Center(child: CircularProgressIndicator());
@@ -46,7 +57,10 @@ class _HomePageState extends State<HomePage> {
                   height: 59.h,
                   color: AppColors.paleIceBlue,
                 ),
-                CustomizedAppBar(),
+                CustomizedAppBar(
+                  title: weatherState?.main ?? "",
+                  degree: WeatherHelper.kelvinToCelsius(mainState?.temp ?? 00),
+                ),
                 SizedBox(height: 16.h),
                 SizedBox(
                   height: 275.h,
@@ -74,20 +88,25 @@ class _HomePageState extends State<HomePage> {
                     dotWidth: 9.w,
                   ),
                 ),
-                mostPopularText(),
+                InkWell(
+                  onTap: (){
+                    print("lat ${CacheHelper.getValue(CacheKeys.lat)}");
+                    print("lat ${CacheHelper.getValue(CacheKeys.lng)}");
+                  },
+                    child: mostPopularText()),
                 SizedBox(height: 16.h),
                 Expanded(
                   child: ListView.builder(
                     itemBuilder: (context, index) {
-                      var article = cubit.news!.articles![index];
+                      var article = cubit.news?.articles![index];
                       return InkWell(
                         onTap: () {
                           context.push(AppRouterPaths.article);
                         },
                         child: CustomizedNewsListItem(
-                          title: article.title ?? "",
-                          category: article.source?.name ?? "",
-                          imagePath: article.urlToImage,
+                          title: article?.title ?? "",
+                          category: article?.source?.name ?? "",
+                          imagePath: article?.urlToImage,
                         ),
                       );
                     },

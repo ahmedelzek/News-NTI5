@@ -74,10 +74,7 @@ class WeatherAPIHelper extends APIHelper {
           print(" EndPoint : ${options.path}");
           print('full url : ${options.uri.toString()}');
 
-          // add api key to query params
-          var appId = '39ef56aa87e0f9d833e66cd9111de959';
-
-          options.queryParameters.addAll({'appid': appId});
+          options.queryParameters.addAll({'appid': EndPoints.appId});
 
           return handler.next(options);
         },
